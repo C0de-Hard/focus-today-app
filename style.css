@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Rose:wght@300..700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    user-select: none;
+}
+body {
+    font-family: 'poppins','sans-serif';
+    background-color: rgba(73, 163, 0, 0.07);
+    padding: 5vh 0 20px;
+}
+#title {
+    font-size: 4rem;
+    color: #48A300;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#title span {
+    color: #61481C;
+}
+.main {
+    max-width: 660px;
+    max-height: 810px;
+    margin: 0 auto;
+    padding: 15px 48px;
+    background-color: #FBFBFB;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+
+}
+.main #subtitle {
+    font-size: 2rem;
+    color: black;
+    margin: 0 0 36px 0;
+}
+.main #sun-bg {
+    vertical-align: middle;
+    animation: sun-spin 4s linear infinite;
+}
+@keyframes sun-spin {
+  0% {
+    transform: rotate(0deg);
+}
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main #sun-face {
+    vertical-align: middle;
+    position: relative;
+    right: 36px;
+}
+
+.main #info1 {
+    color: #858585;
+    margin-bottom: 18px;
+}
+
+.main .bar {
+    width: 100%;
+    height: 22px;
+    background-color: rgba(126, 205, 7, 0.562);
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.main .bar .progress {
+    height: 100%;
+    background-color: #48A300;
+    border-radius: 15px;
+    width: 0;
+    overflow: hidden;
+    transition: width 1.2s ease-in-out;
+    
+}
+
+.main .bar .progress p {
+    text-align: center;
+    min-width: max-content;
+    /* color: rgb(255, 255, 255); */
+    color: black;
+
+}
+.main #info2 {
+    color: red;
+    height: 50px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    visibility: hidden;
+}
+#info2.error {
+    visibility: visible;
+
+}
+.main .task {
+    height: 78px;
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 46px 0;
+    overflow: hidden;
+
+}
+
+.task .checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid hsla(38, 55%, 25%, 0.3);
+    border-radius: 50%;
+    margin: 0 0 0 15px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.completed .checkbox {
+    background-image: url(./tick.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #48A300;
+    border-color: #48A300;
+}
+.completed .text {
+    font-weight: 500;
+    color: #48A300;
+    text-decoration: line-through;
+}
+
+.task .text {
+    border: none;
+    flex-grow: 1;
+    font-size: medium;
+    font-family: inherit;
+    padding-left: 15px;
+    
+    
+}
+.task .text::placeholder {
+    color: rgba(128, 128, 128, 0.429);
+    font-size: medium;
+
+    opacity: 1;
+
+}
+.task .text:focus{
+    border: 0px solid black;
+    outline: none;
+}
+.main #info3 {
+    font-size: medium;
+    color: black;
+    text-align: center;
+    margin-bottom: 66px;
+    font-weight: bold;
+}
+.main #info4 {
+    text-align: center;
+
+
+}
+@media (width <= 720px) {
+    .body {
+        padding-bottom: 10px;
+    }
+    #title {
+        font-size: 2.5rem;
+    }
+    .main #subtitle {
+        font-size: 1.5rem;
+    }
+    .main {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .main .bar {
+        height: 16px;
+        font-size: 12px;
+    }
+    .main .task {
+        height: 50px;
+        margin: 35px 0;
+    }
+    .task .checkbox {
+        width: 16px;
+        height: 16px;
+
+    }
+}
