@@ -14,7 +14,7 @@ A beautiful and interactive daily goal tracker that helps you stay focused and p
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-netlify-url.netlify.app) *(Add your Netlify URL here once deployed)*
+[View Live Demo](https://project001focustoday.netlify.app/) 
 
 ## 📱 Screenshots
 
